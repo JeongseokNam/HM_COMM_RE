@@ -22,7 +22,7 @@
 						<input class="login-input" name="pwd" type="password" placeholder="Please enter PWD">
 					</div>
 					<button class="FromButton" type="submit">Sign in</button>
-					<button class="FromButton" type="button">Sign up</button>
+					<button class="FromButton" type="button" onclick="location.href = 'SignUpForm'">Sign up</button>
 				</form>
 			</div>
 		</div>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
@@ -14,17 +16,17 @@
 	</bean>
 
 	<!-- sqlSession에서 요구한 것을 쿼리문으로 mapping -->
-<!-- 	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
-		<property name="dataSource" ref="dataSource" />
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+		<property name="dataSource" ref="dataSource"/>
 		<property value="classpath:/mapper/*Mapper.xml" name="mapperLocations" />
 	</bean>
 
-	mybatis
-	spring에서 접근하기 위한 객체
+	<!-- mybatis spring에서 접근하기 위한 객체 -->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
-	</bean> -->
+	</bean> 
 	<!-- 서비스/레파지토리 구현후 주석풀것. -->
 	<!-- DAO/service -->
-	
+	<context:component-scan base-package="com.hmbbs.DAO"></context:component-scan>
+	<context:component-scan base-package="com.hmbbs.service"></context:component-scan>
 </beans>

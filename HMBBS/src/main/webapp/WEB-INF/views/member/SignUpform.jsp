@@ -14,7 +14,7 @@
 				<form action="signUp" id="signUp" method="post">
 					<div class="div-input">
 						<input class="signup-input" type="text" placeholder="ID" name="id">
-						<input class="signup-input" type="password" placeholder="PW" name="pw">
+						<input class="signup-input" type="password" placeholder="PW" name="pwd">
 						<input class="signup-input" type="text" placeholder="Name" name="name"> 
 					</div>
 					<div class="FromButton">

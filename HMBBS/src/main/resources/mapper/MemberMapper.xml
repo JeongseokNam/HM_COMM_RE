@@ -2,6 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="">
-
+<mapper namespace="com.hmbbs.DAO.MemberDAO">
+	<insert id="insertmember">
+		insert into member
+		values (mem_no_seq.nextval, #{name}, #{id}, #{pwd})
+	</insert>
 </mapper>
